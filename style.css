@@ -1,0 +1,99 @@
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9; color: #0f172a;
+    height: 100dvh; display: flex; justify-content: center; align-items: center; overflow: hidden;
+}
+
+.app-shell {
+    width: 100%; height: 100%; max-width: 480px; background-color: #ffffff;
+    display: flex; flex-direction: column; position: relative; overflow: hidden;
+}
+@media (min-width: 600px) {
+    .app-shell {
+        height: 92vh; max-height: 860px; border-radius: 24px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+    }
+}
+
+header {
+    padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px 16px;
+    background: #ffffff; border-bottom: 1px solid #e2e8f0;
+    display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; z-index: 10;
+}
+.brand-title { font-size: 18px; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 8px; }
+.badge { font-size: 11px; font-weight: 600; background-color: #eff6ff; color: #2563eb; padding: 4px 8px; border-radius: 9999px; border: 1px solid #dbeafe; }
+
+main { flex: 1; overflow-y: auto; padding: 16px 16px 90px 16px; background-color: #f8fafc; position: relative; scroll-behavior: smooth; }
+
+.card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); }
+.card-title { font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 12px; }
+
+.form-group { margin-bottom: 12px; }
+.form-label { display: block; font-size: 12px; font-weight: 600; color: #64748b; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.025em; }
+.form-select, .form-textarea {
+    width: 100%; padding: 10px 14px; border: 1.5px solid #cbd5e1; border-radius: 12px;
+    font-size: 15px; color: #1e293b; background-color: #ffffff; outline: none; transition: border-color 0.15s ease;
+}
+.form-select:focus, .form-textarea:focus { border-color: #2563eb; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.btn-primary {
+    width: 100%; background-color: #2563eb; color: #ffffff; border: none; padding: 12px;
+    font-size: 15px; font-weight: 600; border-radius: 12px; cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); transition: background-color 0.15s ease;
+}
+.btn-primary:active { background-color: #1d4ed8; }
+.btn-secondary { background-color: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; padding: 12px; font-size: 15px; font-weight: 600; border-radius: 12px; cursor: pointer; width: 100%; }
+
+/* Style Câu Kinh Thánh Độc Lập */
+.verse-content { font-size: 17px; line-height: 1.75; color: #1e293b; text-align: justify; }
+.verse-num { font-size: 12px; font-weight: 700; color: #2563eb; margin-right: 4px; vertical-align: super; }
+
+.verse-span {
+    cursor: pointer; border-radius: 4px; transition: all 0.2s; padding: 0 2px; margin-bottom: 4px; display: inline;
+}
+.verse-span.active { background-color: #e0e7ff; outline: 2px dashed #818cf8; outline-offset: 2px; }
+
+/* Highlight Colors & Styles */
+.hl-yellow { background-color: #fef08a; }
+.hl-green { background-color: #bbf7d0; }
+.hl-pink { background-color: #fbcfe8; }
+.hl-blue { background-color: #bfdbfe; }
+.font-bold { font-weight: 700 !important; }
+.italic { font-style: italic !important; }
+
+/* Chấm điểm học thuộc */
+.diff-clean { color: #15803d; }
+.diff-missing { color: #d97706; background-color: #fef3c7; text-decoration: underline; }
+.diff-extra { color: #dc2626; background-color: #fee2e2; text-decoration: line-through; }
+
+.overlay { position: absolute; inset: 0; background-color: rgba(255, 255, 255, 0.95); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 24px; text-align: center; z-index: 50; }
+.spinner { width: 44px; height: 44px; border: 4px solid #e2e8f0; border-top: 4px solid #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Bottom Nav */
+nav {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: calc(60px + env(safe-area-inset-bottom, 0px)); padding-bottom: env(safe-area-inset-bottom, 0px);
+    background-color: #ffffff; border-top: 1px solid #e2e8f0; display: flex; z-index: 20;
+}
+.nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: none; border: none; font-size: 11px; font-weight: 600; color: #64748b; gap: 4px; cursor: pointer; }
+.nav-item.active { color: #2563eb; }
+
+/* Thanh công cụ Highlight */
+.toolbar {
+    position: absolute; bottom: calc(70px + env(safe-area-inset-bottom, 0px)); left: 16px; right: 16px;
+    background-color: #1e293b; border-radius: 16px; padding: 10px 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); z-index: 40;
+    animation: slideUp 0.3s ease;
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.color-btn { width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+.color-btn.active { border-color: #ffffff; transform: scale(1.1); }
+.style-btn { color: #cbd5e1; font-size: 16px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 8px; cursor: pointer; background: transparent; border: none; }
+.style-btn.active { background-color: #334155; color: #ffffff; }
+.toolbar-divider { width: 1px; height: 24px; background-color: #475569; margin: 0 8px; }
