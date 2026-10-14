@@ -96,37 +96,34 @@
             </div>
 
             <!-- TAB 2: HỌC THUỘC -->
-            <div v-if="currentTab === 'memorize'">
-                <div v-if="!passageLoaded" class="card" style="text-align: center; padding: 32px 16px;">
-                    <p style="font-weight: 600; color: #64748b;">Vui lòng chọn và tải phân đoạn ở mục "Nghiên cứu" trước.</p>
-                </div>
-                <div v-else>
-                    <div class="card" style="text-align: center;">
-                        <span class="badge" style="margin-bottom: 8px; display: inline-block;">{{ currentReference }}</span>
-                        <div style="font-weight: 700; font-size: 16px; margin-bottom: 4px;">Văn bản gốc đã được ẩn</div>
-                        <p style="font-size: 13px; color: #64748b;">Viết lại theo trí nhớ của bạn để hệ thống so sánh đối chiếu.</p>
-                    </div>
-
-                    <div class="form-group">
+            <div class="form-group">
                         <textarea v-model="userInput" class="form-textarea" rows="6" placeholder="Nhập lời Kinh Thánh bạn nhớ tại đây..."></textarea>
                     </div>
 
+                    <!-- THÊM MỚI: Khung chọn chế độ chấm điểm -->
+                    <div class="form-group" style="background: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 16px;">
+                        <label class="form-label" style="margin-bottom: 8px;">Hình thức chấm điểm</label>
+                        <div style="display: flex; gap: 10px; margin-bottom: 8px;">
+                            <label style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; transition: all 0.2s;" :style="gradingMode === 'strict' ? 'border-color: #2563eb; background-color: #eff6ff;' : ''">
+                                <input type="radio" v-model="gradingMode" value="strict" name="gmode" style="display: none;" @change="recheckIfChecked">
+                                <i class="fa-solid fa-check-double" :style="gradingMode === 'strict' ? 'color: #2563eb;' : 'color: #64748b;'"></i>
+                                <span style="font-size: 13px; font-weight: 600;" :style="gradingMode === 'strict' ? 'color: #2563eb;' : 'color: #475569;'">Tuyệt đối</span>
+                            </label>
+                            <label style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; transition: all 0.2s;" :style="gradingMode === 'lenient' ? 'border-color: #2563eb; background-color: #eff6ff;' : ''">
+                                <input type="radio" v-model="gradingMode" value="lenient" name="gmode" style="display: none;" @change="recheckIfChecked">
+                                <i class="fa-solid fa-text-slash" :style="gradingMode === 'lenient' ? 'color: #2563eb;' : 'color: #64748b;'"></i>
+                                <span style="font-size: 13px; font-weight: 600;" :style="gradingMode === 'lenient' ? 'color: #2563eb;' : 'color: #475569;'">Nội dung</span>
+                            </label>
+                        </div>
+                        <p v-if="gradingMode === 'strict'" style="font-size: 12px; color: #64748b; text-align: center; margin: 0;">Chấm khắt khe dấu phẩy, dấu chấm và viết hoa.</p>
+                        <p v-if="gradingMode === 'lenient'" style="font-size: 12px; color: #64748b; text-align: center; margin: 0;">Bỏ qua viết hoa và dấu câu, chỉ xét từ vựng.</p>
+                    </div>
+
+                    <!-- Giữ nguyên 2 nút bấm -->
                     <div class="grid-2" style="margin-bottom: 16px;">
                         <button @click="resetMemorize" class="btn-secondary">Xóa làm lại</button>
                         <button @click="checkMemorization" class="btn-primary">Kiểm tra kết quả</button>
                     </div>
-
-                    <div v-if="checkResult" class="card">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">
-                            <div :style="{ fontWeight: '700', fontSize: '16px', color: checkResult.errors === 0 ? '#15803d' : '#dc2626' }">
-                                {{ checkResult.errors === 0 ? 'Chính xác từng ký tự!' : 'Cần điều chỉnh' }}
-                            </div>
-                            <span class="badge" style="background: #f1f5f9; color: #334155; border-color: #cbd5e1;">Lỗi: {{ checkResult.errors }}</span>
-                        </div>
-                        <div class="verse-content" style="background: #f8fafc; padding: 12px; border-radius: 12px;" v-html="checkResult.html"></div>
-                    </div>
-                </div>
-            </div>
 
             <!-- TAB 3: TRẮC NGHIỆM -->
             <div v-if="currentTab === 'quiz'">

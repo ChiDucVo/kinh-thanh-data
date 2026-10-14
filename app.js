@@ -2,9 +2,9 @@ const { createApp } = Vue;
 
 const vietnameseBookNames = [
     "Sáng-thế Ký", "Xuất Ê-díp-tô Ký", "Lê-vi Ký", "Dân-số Ký", "Phục-truyền Luật-lệ Ký", "Giô-suê", "Các Quan Xét", "Ru-tơ", "1 Sa-mu-ên", "2 Sa-mu-ên", 
-    "1 Các Vua", "2 Các Vua", "1 Sử-ký", "2 Sử-ký", "Ê-xơ-ra", "Nê-hê-mi", "Ê-stê", "Gióp", "Thi-thiên", "Châm-ngôn", 
+    "1 Các Vua", "2 Các Vua", "1 Sử-ký", "2 Sử-ký", "Ê-xơ-ra", "Nê-hê-mi", "Ê-xơ-tê", "Gióp", "Thi-thiên", "Châm-ngôn", 
     "Truyền-đạo", "Nhã-ca", "Ê-sai", "Giê-rê-mi", "Ca-thương", "Ê-xê-chi-ên", "Đa-ni-ên", "Ô-sê", "Giô-ên", "A-mốt", 
-    "Áp-đia", "Giô-na", "Mi-chê", "Na-hum", "Ha-ba-cúc", "Sô-phô-ni", "A-gai", "Xa-cha-ri", "Ma-la-chi", 
+    "Áp-đia", "Giô-na", "Mi-chê", "Na-hum", "Ha-ba-cúc", "Sô-phô-ni", "A-ghê", "Xa-cha-ri", "Ma-la-chi", 
     "Ma-thi-ơ", "Mác", "Lu-ca", "Giăng", "Công-vụ các Sứ-đồ", "Rô-ma", "1 Cô-rinh-tô", "2 Cô-rinh-tô", "Ga-la-ti", "Ê-phê-sô", "Phi-líp", 
     "Cô-lô-se", "1 Tê-sa-lô-ni-ca", "2 Tê-sa-lô-ni-ca", "1 Ti-mô-thê", "2 Ti-mô-thê", "Tít", "Phi-lê-môn", "Hê-bơ-rơ", "Gia-cơ", "1 Phi-e-rơ", 
     "2 Phi-e-rơ", "1 Giăng", "2 Giăng", "3 Giăng", "Giu-đe", "Khải-huyền"
@@ -28,6 +28,7 @@ createApp({
             standardText: '', 
             userInput: '',
             checkResult: null,
+            gradingMode: 'strict',
             userHighlights: {}, 
             activeVerseKey: null
         }
@@ -151,12 +152,42 @@ createApp({
         hasStyle(styleType) { return this.userHighlights[this.activeVerseKey]?.[styleType]; },
 
         resetMemorize() { this.userInput = ''; this.checkResult = null; },
-        checkMemorization() {
+
+
+        // Hàm kích hoạt chấm lại ngay lập tức nếu người dùng đổi chế độ
+        recheckIfChecked() {
+            if (this.checkResult) {
+                this.checkMemorization();
+            }
+        },
+        
+        // Hàm lọc sạch dấu câu và viết thường để chấm lỏng lẻo
+        normalizeForLenient(text) {
+            if (!text) return '';
+            return text.toLowerCase()
+                       // Xóa tất cả các dấu câu cơ bản
+                       .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()""''[\]]/g, '')
+                       // Xóa khoảng trắng dư thừa
+                       .replace(/\s{2,}/g, ' ')
+                       .trim();
+        },
+
+
+       checkMemorization() {
             if (!this.passageLoaded) return;
-            const cleanUserInput = this.userInput.replace(/\s+/g, ' ').trim();
+            
+            let sourceText = this.standardText;
+            let userText = this.userInput.replace(/\s+/g, ' ').trim();
+
+            // Nếu người dùng chọn chấm linh hoạt, ép cả 2 đoạn văn về chữ thường và xóa hết dấu
+            if (this.gradingMode === 'lenient') {
+                sourceText = this.normalizeForLenient(sourceText);
+                userText = this.normalizeForLenient(userText);
+            }
+
             const DiffMatchPatch = window.diff_match_patch || diff_match_patch;
             const dmp = new DiffMatchPatch();
-            const diffs = dmp.diff_main(cleanUserInput, this.standardText);
+            const diffs = dmp.diff_main(userText, sourceText);
             dmp.diff_cleanupSemantic(diffs);
 
             let html = ''; let errors = 0;
@@ -168,5 +199,7 @@ createApp({
             }
             this.checkResult = { html, errors };
         }
+        
     }
+
 }).mount('#app');
