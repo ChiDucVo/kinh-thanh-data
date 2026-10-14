@@ -161,13 +161,20 @@ createApp({
             }
         },
         
-        // Hàm lọc sạch dấu câu và viết thường để chấm lỏng lẻo
+        // Hàm lọc sạch dấu câu, viết thường và loại bỏ DẤU TIẾNG VIỆT để chấm lỏng lẻo
         normalizeForLenient(text) {
             if (!text) return '';
-            return text.toLowerCase()
-                       // Xóa tất cả các dấu câu cơ bản
+            
+            // Bước 1: Chuyển về chữ thường
+            let normalized = text.toLowerCase();
+            
+            // Bước 2: Loại bỏ dấu tiếng Việt
+            normalized = normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            normalized = normalized.replace(/đ/g, "d");
+
+            // Bước 3: Xóa tất cả các dấu câu cơ bản và khoảng trắng dư thừa
+            return normalized
                        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()""''[\]]/g, '')
-                       // Xóa khoảng trắng dư thừa
                        .replace(/\s{2,}/g, ' ')
                        .trim();
         },
