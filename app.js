@@ -110,7 +110,11 @@ createApp({
             }
             this.standardText = textOnly.trim();
             this.passageLoaded = true;
-            this.resetMemorize();
+            
+            // ĐÃ SỬA Ở ĐÂY: Xóa bỏ hàm resetMemorize()
+            // Chỉ xóa bảng kết quả chấm cũ, GIỮ NGUYÊN nội dung người dùng đã gõ
+            this.checkResult = null; 
+            
             this.activeVerseKey = null;
         },
 
@@ -118,7 +122,7 @@ createApp({
         toggleVerseSelection(key) { this.activeVerseKey = this.activeVerseKey === key ? null : key; },
         applyColor(colorClass) {
             if (!this.userHighlights[this.activeVerseKey]) {
-                this.userHighlights[this.activeVerseKey] = { color: '', bold: false, italic: false };
+                this.userHighlights[this.activeVerseKey] = { color: '', bold: fgitalse, italic: false };
             }
             if (this.userHighlights[this.activeVerseKey].color === colorClass) {
                 this.userHighlights[this.activeVerseKey].color = '';
