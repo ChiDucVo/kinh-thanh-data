@@ -288,34 +288,52 @@ createApp({
         loadChapterQuiz() {
             this.userAnswers = {};
             this.quizSubmitted = false;
+            this.quizMessage = ''; 
             
-            let chapterData = null;
-            if (this.quizData) {
-                // Nếu đây là file gốc 50 câu của bạn (có mảng 'questions' bên trong)
-                if (this.quizData.questions && Array.isArray(this.quizData.questions)) {
-                    // Tự động rút trích các câu hỏi thuộc về chương đang mở
-                    let rawQuestions = this.quizData.questions.filter(q => q.chapter == this.selectedChapter);
-                    
-                    // Tự động chuyển đổi format đáp án A,B,C,D của bạn sang format của giao diện
-                    chapterData = rawQuestions.map(q => {
-                        let correctIdx = q.options.findIndex(opt => opt.key === q.correct_answer);
-                        return {
-                            question: q.question,
-                            options: q.options.map(opt => opt.text), // Chỉ lấy phần chữ của đáp án
-                            correctIndex: correctIdx !== -1 ? correctIdx : 0,
-                            explanation: q.explanation
-                        };
-                    });
-                } else {
-                    // Dành cho cấu trúc gom nhóm sẵn (nếu sau này bạn dùng)
-                    chapterData = this.quizData[this.selectedChapter];
+            let chapterData = [];
+            
+            try {
+                if (this.quizData) {
+                    if (this.quizData.questions && Array.isArray(this.quizData.questions)) {
+                        // Ép kiểu chuỗi để lọc chuẩn xác chương
+                        let rawQuestions = this.quizData.questions.filter(q => String(q.chapter) === String(this.selectedChapter));
+                        
+                        chapterData = rawQuestions.map(q => {
+                            let correctIdx = 0;
+                            let opts = [];
+                            
+                            // Lọc linh hoạt nếu options là object (có key/text) hoặc chỉ là chữ bình thường
+                            if (q.options && q.options.length > 0) {
+                                if (typeof q.options[0] === 'object') {
+                                    correctIdx = q.options.findIndex(opt => opt.key === q.correct_answer);
+                                    opts = q.options.map(opt => opt.text);
+                                } else {
+                                    correctIdx = q.correctIndex !== undefined ? q.correctIndex : 0;
+                                    opts = q.options;
+                                }
+                            }
+                            
+                            return {
+                                question: q.question,
+                                options: opts,
+                                correctIndex: correctIdx !== -1 ? correctIdx : 0,
+                                explanation: q.explanation || ""
+                            };
+                        });
+                    } else {
+                        chapterData = this.quizData[this.selectedChapter] || [];
+                    }
                 }
+            } catch (err) {
+                console.error("Lỗi xử lý JSON:", err);
+                chapterData = [];
             }
 
+            // Kiểm tra hiển thị
             if (chapterData && chapterData.length > 0) {
                 this.currentQuiz = chapterData;
                 this.quizMessage = '';
-            } else if (this.quizData) {
+            } else {
                 this.currentQuiz = [];
                 this.quizMessage = `Chưa có câu hỏi trắc nghiệm cho chương ${this.selectedChapter}.`;
             }
