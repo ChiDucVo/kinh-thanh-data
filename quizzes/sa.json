@@ -1,0 +1,39 @@
+{
+  "1": [
+    {
+      "question": "Trong Sáng Thế Ký đoạn 1, Đức Chúa Trời đã tạo dựng nên trời đất trong bao nhiêu ngày?",
+      "options": [
+        "5 ngày",
+        "6 ngày",
+        "7 ngày",
+        "8 ngày"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đức Chúa Trời sáng tạo vạn vật trong 6 ngày, và đến ngày thứ 7 thì Ngài nghỉ ngơi (Sáng-thế Ký 2:2)."
+    },
+    {
+      "question": "Đức Chúa Trời tạo ra sự sáng vào ngày thứ mấy?",
+      "options": [
+        "Ngày thứ nhất",
+        "Ngày thứ hai",
+        "Ngày thứ ba",
+        "Ngày thứ tư"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sáng Thế Ký 1:3-5 chép rằng Đức Chúa Trời tạo ra sự sáng và gọi sự sáng là ngày, sự tối là đêm. Ấy là ngày thứ nhất."
+    }
+  ],
+  "2": [
+    {
+      "question": "Đức Chúa Trời đã lấy gì để nắn nên con người?",
+      "options": [
+        "Bụi đất",
+        "Hơi thở",
+        "Đá",
+        "Nước"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sáng Thế Ký 2:7: 'Giê-hô-va Đức Chúa Trời bèn lấy bụi đất nắn nên hình người, hà sanh khí vào lỗ mũi; thì người trở nên một loài sanh linh.'"
+    }
+  ]
+}

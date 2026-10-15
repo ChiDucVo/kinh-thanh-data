@@ -10,6 +10,17 @@ const vietnameseBookNames = [
     "2 Phi-e-rơ", "1 Giăng", "2 Giăng", "3 Giăng", "Giu-đe", "Khải-huyền"
 ];
 
+// Mảng mã sách chuẩn để dùng cho việc gọi file JSON Trắc nghiệm (quizzes/sa.json, quizzes/ro.json...)
+const bookCodes = [
+    "sa", "xu", "le", "dan", "phu", "gios", "cac", "ru", "1sa", "2sa", 
+    "1vua", "2vua", "1su", "2su", "exo", "ne", "et", "giop", "thi", "ch", 
+    "tr", "nha", "es", "gie", "ca", "exe", "da", "os", "gio", "am", 
+    "ap", "gion", "mi", "na", "ha", "so", "ag", "xa", "ma", 
+    "mat", "mac", "lu", "gi", "cong", "ro", "1co", "2co", "ga", "eph", "phi", 
+    "co", "1te", "2te", "1ti", "2ti", "tit", "phil", "he", "gia", "1phi", 
+    "2phi", "1gi", "2gi", "3gi", "giu", "kh"
+];
+
 createApp({
     data() {
         return {
@@ -30,7 +41,16 @@ createApp({
             checkResult: null,
             gradingMode: 'strict',
             userHighlights: {}, 
-            activeVerseKey: null
+            activeVerseKey: null,
+            
+            // Hệ thống Trắc nghiệm
+            quizData: null,
+            currentQuizBookId: null,
+            currentQuiz: [],
+            userAnswers: {},
+            quizSubmitted: false,
+            quizLoading: false,
+            quizMessage: ''
         }
     },
     computed: {
@@ -80,11 +100,27 @@ createApp({
         },
         setupBible(data) {
             this.bibleData = data;
-            this.books = data.map((book, idx) => ({ id: idx, name: vietnameseBookNames[idx] || book.name, chapters: book.chapters.length, isOT: idx < 39 }));
+            this.books = data.map((book, idx) => ({ 
+                id: idx, 
+                name: vietnameseBookNames[idx] || book.name, 
+                code: bookCodes[idx], // Thêm mã sách để dùng cho gọi file Trắc nghiệm
+                chapters: book.chapters.length, 
+                isOT: idx < 39 
+            }));
         },
-        onBookChange() { this.selectedChapter = 1; this.startVerse = 1; this.endVerse = 1; this.passageLoaded = false; this.activeVerseKey = null; },
-        onStartVerseChange() { if (this.endVerse < this.startVerse) this.endVerse = this.startVerse; this.passageLoaded = false; this.activeVerseKey = null; },
-        onVerseChange() { this.passageLoaded = false; this.activeVerseKey = null; },
+        onBookChange() { 
+            this.selectedChapter = 1; this.startVerse = 1; this.endVerse = 1; 
+            this.passageLoaded = false; this.activeVerseKey = null; 
+            if (this.currentTab === 'quiz') this.loadChapterQuiz(); 
+        },
+        onStartVerseChange() { 
+            if (this.endVerse < this.startVerse) this.endVerse = this.startVerse; 
+            this.passageLoaded = false; this.activeVerseKey = null; 
+        },
+        onVerseChange() { 
+            this.passageLoaded = false; this.activeVerseKey = null;
+            if (this.currentTab === 'quiz') this.loadChapterQuiz(); 
+        },
         cleanVerseText(text) { return text.replace(/⚓/g, '').replace(/\s+/g, ' ').trim(); },
         
         loadPassage() {
@@ -111,8 +147,7 @@ createApp({
             this.standardText = textOnly.trim();
             this.passageLoaded = true;
             
-            // ĐÃ SỬA Ở ĐÂY: Xóa bỏ hàm resetMemorize()
-            // Chỉ xóa bảng kết quả chấm cũ, GIỮ NGUYÊN nội dung người dùng đã gõ
+            // Xóa bảng kết quả chấm cũ, GIỮ NGUYÊN nội dung người dùng đã gõ bên Tab Học Thuộc
             this.checkResult = null; 
             
             this.activeVerseKey = null;
@@ -122,7 +157,7 @@ createApp({
         toggleVerseSelection(key) { this.activeVerseKey = this.activeVerseKey === key ? null : key; },
         applyColor(colorClass) {
             if (!this.userHighlights[this.activeVerseKey]) {
-                this.userHighlights[this.activeVerseKey] = { color: '', bold: fgitalse, italic: false };
+                this.userHighlights[this.activeVerseKey] = { color: '', bold: false, italic: false };
             }
             if (this.userHighlights[this.activeVerseKey].color === colorClass) {
                 this.userHighlights[this.activeVerseKey].color = '';
@@ -157,7 +192,6 @@ createApp({
 
         resetMemorize() { this.userInput = ''; this.checkResult = null; },
 
-
         // Hàm kích hoạt chấm lại ngay lập tức nếu người dùng đổi chế độ
         recheckIfChecked() {
             if (this.checkResult) {
@@ -183,8 +217,7 @@ createApp({
                        .trim();
         },
 
-
-       checkMemorization() {
+        checkMemorization() {
             if (!this.passageLoaded) return;
             
             let sourceText = this.standardText;
@@ -209,8 +242,114 @@ createApp({
                 else if (op === -1) { html += `<span class="diff-extra">${text}</span>`; errors += text.length; }
             }
             this.checkResult = { html, errors };
-        }
-        
-    }
+        },
 
+        // DÁN HÀM SWITCH TAB VÀO VỊ TRÍ NÀY
+        switchTab(tab) {
+            this.currentTab = tab;
+            if (tab === 'quiz') {
+                this.fetchQuizData();
+            }
+        },
+
+        // ---- HỆ THỐNG TRẮC NGHIỆM ----
+        async fetchQuizData() {
+            const book = this.books.find(b => b.id === this.selectedBookId);
+            // Nếu đã tải file của sách này rồi thì không tải lại để tiết kiệm mạng
+            if (this.currentQuizBookId === book.id && this.quizData) {
+                this.loadChapterQuiz();
+                return;
+            }
+
+            this.quizLoading = true;
+            this.quizMessage = '';
+            this.currentQuiz = [];
+            this.userAnswers = {};
+            this.quizSubmitted = false;
+
+            try {
+                // Gọi file JSON tương ứng với mã sách (vd: quizzes/sa.json)
+                const url = `https://raw.githubusercontent.com/ChiDucVo/kinh-thanh-data/main/quizzes/${book.code}.json`;
+                const res = await fetch(url, { cache: 'no-store' }); // Bỏ qua cache để luôn cập nhật câu hỏi mới
+                if (!res.ok) throw new Error('Not found');
+                
+                this.quizData = await res.json();
+                this.currentQuizBookId = book.id;
+                this.loadChapterQuiz();
+            } catch (e) {
+                this.quizData = null;
+                this.currentQuizBookId = book.id;
+                this.quizMessage = 'Bộ câu hỏi cho sách này đang được biên soạn. Vui lòng quay lại sau!';
+            } finally {
+                this.quizLoading = false;
+            }
+        },
+        
+        loadChapterQuiz() {
+            this.userAnswers = {};
+            this.quizSubmitted = false;
+            
+            let chapterData = null;
+            if (this.quizData) {
+                // Nếu đây là file gốc 50 câu của bạn (có mảng 'questions' bên trong)
+                if (this.quizData.questions && Array.isArray(this.quizData.questions)) {
+                    // Tự động rút trích các câu hỏi thuộc về chương đang mở
+                    let rawQuestions = this.quizData.questions.filter(q => q.chapter == this.selectedChapter);
+                    
+                    // Tự động chuyển đổi format đáp án A,B,C,D của bạn sang format của giao diện
+                    chapterData = rawQuestions.map(q => {
+                        let correctIdx = q.options.findIndex(opt => opt.key === q.correct_answer);
+                        return {
+                            question: q.question,
+                            options: q.options.map(opt => opt.text), // Chỉ lấy phần chữ của đáp án
+                            correctIndex: correctIdx !== -1 ? correctIdx : 0,
+                            explanation: q.explanation
+                        };
+                    });
+                } else {
+                    // Dành cho cấu trúc gom nhóm sẵn (nếu sau này bạn dùng)
+                    chapterData = this.quizData[this.selectedChapter];
+                }
+            }
+
+            if (chapterData && chapterData.length > 0) {
+                this.currentQuiz = chapterData;
+                this.quizMessage = '';
+            } else if (this.quizData) {
+                this.currentQuiz = [];
+                this.quizMessage = `Chưa có câu hỏi trắc nghiệm cho chương ${this.selectedChapter}.`;
+            }
+        },
+        
+        getOptionStyle(qIndex, optIndex, correctIndex) {
+            if (!this.quizSubmitted) {
+                return this.userAnswers[qIndex] === optIndex 
+                    ? 'border-color: #2563eb; background-color: #eff6ff;' 
+                    : 'background-color: #fff;';
+            }
+            if (optIndex === correctIndex) {
+                return 'border-color: #22c55e; background-color: #f0fdf4; font-weight: 600;'; // Xanh lá
+            }
+            if (this.userAnswers[qIndex] === optIndex && optIndex !== correctIndex) {
+                return 'border-color: #ef4444; background-color: #fef2f2;'; // Đỏ
+            }
+            return 'background-color: #fff; opacity: 0.5;';
+        },
+        
+        submitQuiz() {
+            // Kiểm tra xem đã làm hết câu hỏi chưa
+            const totalQuestions = this.currentQuiz.length;
+            const answeredQuestions = Object.keys(this.userAnswers).length;
+            if (answeredQuestions < totalQuestions) {
+                alert(`Bạn còn ${totalQuestions - answeredQuestions} câu chưa chọn đáp án!`);
+                return;
+            }
+            this.quizSubmitted = true;
+        },
+        
+        resetQuiz() {
+            this.userAnswers = {};
+            this.quizSubmitted = false;
+        }
+    }
 }).mount('#app');

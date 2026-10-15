@@ -1,0 +1,584 @@
+{
+  "1": [
+    {
+      "question": "Trong phần mở đầu thư Rô-ma, Phao-lô tự giới thiệu mình là gì?",
+      "options": [
+        "Một thầy tế lễ tại Giê-ru-sa-lem",
+        "Tôi tớ của Đức Chúa Jêsus Christ, được gọi làm sứ đồ",
+        "Vua của dân ngoại",
+        "Một trong mười hai sứ đồ đã theo Chúa từ đầu"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 1:1 giới thiệu Phao-lô là tôi tớ của Đức Chúa Jêsus Christ, được gọi làm sứ đồ và biệt riêng ra để giảng Tin Lành của Đức Chúa Trời."
+    },
+    {
+      "question": "Phao-lô nói Tin Lành là gì đối với mọi người tin?",
+      "options": [
+        "Một triết lý giúp con người sống tốt hơn",
+        "Quyền phép của Đức Chúa Trời để cứu mọi kẻ tin",
+        "Một dấu hiệu cho thấy người ta thuộc dân Do Thái",
+        "Một bộ luật thay thế mọi luật lệ dân sự"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 1:16 nhấn mạnh Tin Lành là quyền phép Đức Chúa Trời để cứu mọi kẻ tin, trước là người Do Thái, sau là người Hy Lạp."
+    },
+    {
+      "question": "Theo Rô-ma 1:17, người công bình sẽ sống bởi điều gì?",
+      "options": [
+        "Sự khôn ngoan của mình",
+        "Việc làm theo luật pháp một cách hoàn hảo",
+        "Đức tin",
+        "Địa vị trong xã hội"
+      ],
+      "correctIndex": 2,
+      "explanation": "Câu 17 nói: “Người công bình sẽ sống bởi đức tin.” Đây là một chủ đề then chốt trong lập luận của thư Rô-ma."
+    },
+    {
+      "question": "Phao-lô lập luận rằng điều gì có thể được nhận biết qua những công việc sáng tạo của Đức Chúa Trời?",
+      "options": [
+        "Mọi chi tiết về tương lai của từng người",
+        "Những điều vô hình của Ngài, gồm quyền phép đời đời và bổn tánh thần thượng",
+        "Danh sách đầy đủ các điều răn trong luật Môi-se",
+        "Ngày giờ chính xác của ngày tận thế"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 1:20 nói các thuộc tính vô hình của Đức Chúa Trời được thấy rõ qua những vật Ngài đã dựng nên; câu này không nói rằng con người nhờ thiên nhiên mà biết được mọi chân lý cứu rỗi."
+    },
+    {
+      "question": "Theo Rô-ma 1, một biểu hiện của sự bội nghịch được mô tả là gì?",
+      "options": [
+        "Không có khả năng hiểu bất kỳ điều gì về thế giới",
+        "Biết Đức Chúa Trời nhưng không tôn vinh Ngài, rồi đổi vinh hiển Ngài lấy hình tượng",
+        "Từ chối mọi hình thức lao động",
+        "Không tham gia các lễ hội tôn giáo"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô mô tả con người không tôn vinh, cảm tạ Đức Chúa Trời và đổi sự vinh hiển của Ngài lấy hình tượng do loài người tạo ra."
+    }
+  ],
+  "2": [
+    {
+      "question": "Phao-lô cảnh báo điều gì đối với người lên án người khác nhưng cũng phạm những điều tương tự?",
+      "options": [
+        "Người ấy tự đặt mình ngoài sự phán xét",
+        "Người ấy không có trách nhiệm trước Đức Chúa Trời",
+        "Người ấy tự lên án chính mình",
+        "Người ấy được tha thứ chỉ vì biết luật pháp"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rô-ma 2:1 cảnh báo người xét đoán người khác nhưng làm những điều tương tự thì không thể viện việc xét đoán ấy để tránh sự phán xét."
+    },
+    {
+      "question": "Theo Rô-ma 2, Đức Chúa Trời xét đoán con người theo nguyên tắc nào?",
+      "options": [
+        "Theo địa vị gia đình",
+        "Theo vẻ bề ngoài và quốc tịch",
+        "Theo việc làm, và Ngài không vị nể ai",
+        "Chỉ theo việc người đó có biết luật Môi-se hay không"
+      ],
+      "correctIndex": 2,
+      "explanation": "Đoạn này nói Đức Chúa Trời báo trả mỗi người tùy theo việc họ làm và không thiên vị. Cần đọc trong toàn mạch thư để hiểu quan hệ giữa phán xét, tội lỗi, ân điển và đức tin."
+    },
+    {
+      "question": "Hình ảnh “cắt bì trong lòng” nhấn mạnh điều gì?",
+      "options": [
+        "Nghi thức bên ngoài tự nó bảo đảm sự công chính",
+        "Sự đổi mới bên trong bởi Thánh Linh, chứ không chỉ là dấu hiệu bên ngoài",
+        "Người ngoại bang phải đổi quốc tịch",
+        "Mọi nghi thức trong Cựu Ước đều không có ý nghĩa lịch sử"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô phân biệt dấu hiệu bên ngoài với sự biến đổi trong lòng bởi Thánh Linh. Câu này không đơn giản phủ nhận lịch sử hay mọi ý nghĩa của nghi thức giao ước."
+    }
+  ],
+  "3": [
+    {
+      "question": "Phao-lô khẳng định điều gì về tình trạng công bình của nhân loại?",
+      "options": [
+        "Chỉ người ngoại bang là có tội",
+        "Chỉ người Do Thái là có tội",
+        "Không có một người công bình nào, chẳng có một người nào cả",
+        "Phần lớn mọi người đều tự trở nên công bình được"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rô-ma 3 trích dẫn Kinh Thánh để lập luận rằng cả người Do Thái lẫn người ngoại bang đều ở dưới tội lỗi."
+    },
+    {
+      "question": "Theo Rô-ma 3:23–24, con người được xưng công bình bởi điều gì?",
+      "options": [
+        "Công đức tích lũy qua nhiều đời",
+        "Ân điển Đức Chúa Trời, nhờ sự cứu chuộc trong Đức Chúa Jêsus Christ",
+        "Việc thuộc về một dân tộc nhất định",
+        "Sự tự hoàn thiện không cần ân điển"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mọi người đều phạm tội và thiếu mất sự vinh hiển Đức Chúa Trời, nhưng được xưng công bình nhưng không bởi ân điển Ngài, qua sự cứu chuộc trong Đấng Christ."
+    },
+    {
+      "question": "Phao-lô kết luận con người được xưng công bình bởi điều gì, không cậy việc làm theo luật pháp?",
+      "options": [
+        "Đức tin",
+        "Dòng dõi",
+        "Sự khôn ngoan",
+        "Nghi thức tôn giáo"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rô-ma 3:28 nêu kết luận rằng người ta được xưng công bình bởi đức tin, không cậy việc làm theo luật pháp."
+    },
+    {
+      "question": "Lập luận Đức Chúa Trời là Đức Chúa Trời của cả người Do Thái lẫn dân ngoại hàm ý điều gì?",
+      "options": [
+        "Chỉ một dân tộc mới có thể được cứu",
+        "Đức Chúa Trời chỉ quan tâm đến những người giữ nghi thức",
+        "Đức Chúa Trời là một, và Ngài xưng công bình người chịu cắt bì cũng như người không chịu cắt bì bởi đức tin",
+        "Người Do Thái và dân ngoại phải có cùng văn hóa mới được cứu"
+      ],
+      "correctIndex": 2,
+      "explanation": "Phao-lô nhấn mạnh Đức Chúa Trời là một và việc xưng công bình không bị giới hạn bởi ranh giới dân tộc hay nghi thức cắt bì."
+    }
+  ],
+  "4": [
+    {
+      "question": "Áp-ra-ham được kể là công bình bởi điều gì?",
+      "options": [
+        "Ông chưa từng phạm lỗi",
+        "Ông tin Đức Chúa Trời, và đức tin ấy được kể là công bình cho ông",
+        "Ông đã nhận luật pháp Môi-se",
+        "Ông được sinh ra trong một gia đình vua chúa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô dùng Sáng Thế Ký 15:6 để giải thích rằng Áp-ra-ham tin Đức Chúa Trời và được kể là công bình."
+    },
+    {
+      "question": "Vì sao Phao-lô nhấn mạnh việc Áp-ra-ham được kể là công bình trước khi chịu cắt bì?",
+      "options": [
+        "Để chứng minh cắt bì là điều không bao giờ có ý nghĩa",
+        "Để cho thấy Áp-ra-ham là cha của người tin, dù có hay không có dấu cắt bì",
+        "Để nói luật pháp được ban trước Áp-ra-ham",
+        "Để loại người Do Thái khỏi lời hứa của Đức Chúa Trời"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trình tự thời gian giúp Phao-lô lập luận rằng Áp-ra-ham là cha của những người tin, kể cả người chưa chịu cắt bì nhưng có đức tin."
+    },
+    {
+      "question": "Đức tin của Áp-ra-ham được mô tả thế nào khi ông đối diện lời hứa của Đức Chúa Trời?",
+      "options": [
+        "Ông không bao giờ gặp bất kỳ khó khăn hay câu hỏi nào",
+        "Ông được mạnh mẽ trong đức tin, tin chắc Đức Chúa Trời có quyền làm điều Ngài đã hứa",
+        "Ông tự thực hiện lời hứa bằng sức riêng",
+        "Ông từ chối chờ đợi và bỏ đi"
+      ],
+      "correctIndex": 1,
+      "explanation": "Đoạn này nhấn mạnh Áp-ra-ham tôn vinh Đức Chúa Trời và tin chắc Ngài có quyền làm thành điều đã hứa."
+    }
+  ],
+  "5": [
+    {
+      "question": "Kết quả được nêu ra khi chúng ta đã được xưng công bình bởi đức tin là gì?",
+      "options": [
+        "Chúng ta được hòa thuận với Đức Chúa Trời nhờ Đức Chúa Jêsus Christ",
+        "Chúng ta không còn phải đối diện khó khăn",
+        "Chúng ta không còn cần cầu nguyện",
+        "Chúng ta được miễn mọi trách nhiệm đạo đức"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rô-ma 5:1 nói rằng được xưng công bình bởi đức tin, chúng ta có sự hòa thuận với Đức Chúa Trời nhờ Đức Chúa Jêsus Christ."
+    },
+    {
+      "question": "Theo Rô-ma 5:3–5, hoạn nạn có thể dẫn đến chuỗi kết quả nào?",
+      "options": [
+        "Hoạn nạn → kiên nhẫn → rèn tập → trông cậy",
+        "Hoạn nạn → giàu có → danh tiếng → quyền lực",
+        "Hoạn nạn → vô tín → tuyệt vọng → thù ghét",
+        "Hoạn nạn → không cần cộng đồng → tự cứu mình"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô mô tả hoạn nạn sinh ra sự nhịn nhục, nhịn nhục sinh ra rèn tập, và rèn tập sinh ra sự trông cậy; tình yêu Đức Chúa Trời được đổ ra trong lòng bởi Đức Thánh Linh."
+    },
+    {
+      "question": "Đức Chúa Trời bày tỏ tình yêu Ngài đối với chúng ta như thế nào?",
+      "options": [
+        "Đợi chúng ta trở nên hoàn hảo rồi mới yêu",
+        "Đấng Christ vì chúng ta chịu chết khi chúng ta còn là người có tội",
+        "Chỉ ban tình yêu cho người giàu có",
+        "Chỉ yêu những người chưa từng phạm tội"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 5:8 nhấn mạnh tình yêu Đức Chúa Trời được bày tỏ trong việc Đấng Christ chết thay cho chúng ta khi chúng ta còn là người có tội."
+    },
+    {
+      "question": "Trong sự đối chiếu giữa A-đam và Đấng Christ, Phao-lô nhấn mạnh điều gì?",
+      "options": [
+        "Tội lỗi và sự chết vào thế gian qua một người; ân điển và sự sống được ban dư dật qua Đức Chúa Jêsus Christ",
+        "A-đam và Đấng Christ có vai trò hoàn toàn giống nhau",
+        "Luật pháp làm cho tội lỗi biến mất hoàn toàn",
+        "Sự chết chỉ ảnh hưởng đến một nhóm dân tộc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô đối chiếu hậu quả của sự phạm tội qua A-đam với ân điển và sự ban cho công bình qua Đấng Christ. Các truyền thống Cơ Đốc có những cách giải thích chi tiết khác nhau về phạm vi và cơ chế của sự liên đới này."
+    }
+  ],
+  "6": [
+    {
+      "question": "Phao-lô trả lời thế nào trước ý tưởng cứ ở trong tội lỗi để ân điển được dư dật?",
+      "options": [
+        "Đồng ý vì tội lỗi làm ân điển nổi bật hơn",
+        "Bác bỏ: người đã chết về tội lỗi không nên tiếp tục sống trong tội lỗi",
+        "Nói rằng hành vi không quan trọng",
+        "Khuyên chỉ cần tránh bị người khác phát hiện"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô bác bỏ việc lợi dụng ân điển để biện minh cho tội lỗi. Phép báp-têm được dùng để mô tả sự đồng nhất với sự chết và sự sống lại của Đấng Christ."
+    },
+    {
+      "question": "Người tin được khuyên phải xem mình thế nào đối với tội lỗi và Đức Chúa Trời?",
+      "options": [
+        "Đang sống cho tội lỗi như trước",
+        "Đã chết về tội lỗi nhưng sống cho Đức Chúa Trời trong Đức Chúa Jêsus Christ",
+        "Không thể chống lại tội lỗi nên không cần cố gắng",
+        "Được tự do để làm bất cứ điều gì mình muốn"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 6 kêu gọi người tin nhận biết căn tính mới trong Đấng Christ và không để tội lỗi cai trị thân thể mình."
+    },
+    {
+      "question": "Rô-ma 6:23 đối chiếu tiền công của tội lỗi với điều gì?",
+      "options": [
+        "Tiền công của tội lỗi là sự chết; sự ban cho của Đức Chúa Trời là sự sống đời đời trong Đức Chúa Jêsus Christ",
+        "Tiền công của tội lỗi là bệnh tật; phần thưởng của việc làm là giàu có",
+        "Tội lỗi không có hậu quả",
+        "Sự sống đời đời là điều con người tự kiếm được"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu này đối chiếu sự chết là tiền công của tội lỗi với sự sống đời đời là sự ban cho của Đức Chúa Trời trong Đấng Christ."
+    }
+  ],
+  "7": [
+    {
+      "question": "Theo lập luận của Rô-ma 7:7–13, luật pháp có phải chính là tội lỗi không?",
+      "options": [
+        "Có, luật pháp tự nó là tội lỗi",
+        "Không; luật pháp bày tỏ tội lỗi, còn tội lỗi lợi dụng điều răn để sinh ra sự phạm tội",
+        "Có, vì mọi điều răn đều xấu",
+        "Không, vì luật pháp khiến con người không thể phạm tội"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô nói luật pháp không phải là tội lỗi; luật pháp cho biết tội lỗi là gì, nhưng tội lỗi lợi dụng điều răn. Đoạn này cần được đọc cùng khẳng định rằng luật pháp là thánh, công bình và tốt lành."
+    },
+    {
+      "question": "Cách hiểu nào thận trọng nhất về cuộc đấu tranh được mô tả trong Rô-ma 7?",
+      "options": [
+        "Mọi truyền thống Cơ Đốc đều đồng ý rằng đoạn này chỉ nói về người chưa tin",
+        "Mọi truyền thống Cơ Đốc đều đồng ý rằng đoạn này chỉ nói về người đã tin",
+        "Đoạn này mô tả sự xung đột giữa ý muốn làm điều thiện và quyền lực tội lỗi; danh tính chính xác của người được mô tả được giải thích khác nhau",
+        "Phao-lô kết luận rằng con người có thể tự cứu mình bằng ý chí"
+      ],
+      "correctIndex": 2,
+      "explanation": "Các truyền thống giải kinh tranh luận liệu “tôi” chủ yếu mô tả người dưới luật pháp, kinh nghiệm của Phao-lô, hay cuộc đấu tranh của người tin. Điểm rõ ràng trong đoạn là sự bất lực của con người trước tội lỗi và nhu cầu được giải cứu qua Đức Chúa Jêsus Christ."
+    }
+  ],
+  "8": [
+    {
+      "question": "Rô-ma 8:1 tuyên bố điều gì về những người ở trong Đức Chúa Jêsus Christ?",
+      "options": [
+        "Họ không còn gặp bất kỳ đau khổ nào",
+        "Họ không bị định tội nữa",
+        "Họ không cần sống theo Thánh Linh",
+        "Họ không cần ăn năn khi phạm tội"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 8:1 tuyên bố không có sự định tội cho những người ở trong Đức Chúa Jêsus Christ. Điều này không có nghĩa người tin được phép xem nhẹ tội lỗi."
+    },
+    {
+      "question": "Theo Rô-ma 8, người được Thánh Linh Đức Chúa Trời dắt dẫn được gọi là gì?",
+      "options": [
+        "Con cái Đức Chúa Trời",
+        "Người không bao giờ cần cộng đồng",
+        "Người được miễn mọi thử thách",
+        "Người có quyền thống trị người khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rô-ma 8 nói những người được Thánh Linh Đức Chúa Trời dắt dẫn là con cái Đức Chúa Trời; họ nhận lãnh Thần trí của sự làm con nuôi và kêu rằng “A-ba! Cha!”."
+    },
+    {
+      "question": "Đức Thánh Linh giúp đỡ chúng ta trong sự yếu đuối như thế nào?",
+      "options": [
+        "Ngài làm cho chúng ta không bao giờ cần cầu nguyện",
+        "Ngài giúp đỡ và cầu thay cho chúng ta theo ý muốn Đức Chúa Trời",
+        "Ngài luôn ban câu trả lời theo đúng thời điểm chúng ta muốn",
+        "Ngài thay thế hoàn toàn trách nhiệm của con người"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 8:26–27 mô tả Thánh Linh giúp đỡ sự yếu đuối và cầu thay cho các thánh đồ theo ý Đức Chúa Trời."
+    },
+    {
+      "question": "Đọc Rô-ma 8:28 một cách phù hợp với ngữ cảnh, nên hiểu thế nào?",
+      "options": [
+        "Mọi sự kiện tự nó đều tốt đẹp và không gây đau đớn",
+        "Người tin sẽ luôn nhận được kết quả mình mong muốn",
+        "Đức Chúa Trời hành động trong mọi sự vì ích lợi của những người yêu mến Ngài và được gọi theo ý định Ngài; điều này không gọi điều ác là điều tốt",
+        "Đau khổ chứng minh Đức Chúa Trời đã bỏ rơi một người"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ngữ cảnh Rô-ma 8 nói về đau khổ hiện tại, sự trông đợi và mục đích Đức Chúa Trời. Câu này không hứa rằng mọi biến cố đều tốt tự thân hay mọi người tin sẽ tránh được đau khổ."
+    },
+    {
+      "question": "Điều gì có thể phân rẽ người tin khỏi tình yêu của Đức Chúa Trời trong Đức Chúa Jêsus Christ theo Rô-ma 8:38–39?",
+      "options": [
+        "Chỉ sự chết",
+        "Chỉ quyền lực trên đất",
+        "Không điều gì trong những điều Phao-lô liệt kê có thể phân rẽ họ khỏi tình yêu ấy",
+        "Mọi hoạn nạn đều tự động làm mất tình yêu ấy"
+      ],
+      "correctIndex": 2,
+      "explanation": "Phao-lô bày tỏ niềm tin chắc rằng sự chết, sự sống, thiên sứ, quyền phép và các điều khác không thể phân rẽ chúng ta khỏi tình yêu Đức Chúa Trời trong Đấng Christ."
+    }
+  ],
+  "9": [
+    {
+      "question": "Câu hỏi thần học chính trong Rô-ma 9:14–18 là gì?",
+      "options": [
+        "Đức Chúa Trời có bất công khi bày tỏ lòng thương xót theo ý Ngài không?",
+        "Có nên xây thêm đền thờ ở Rô-ma không?",
+        "Người tin có cần làm việc không?",
+        "Phao-lô có được phép đi đến Tây Ban Nha không?"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô nêu câu hỏi liệu Đức Chúa Trời có bất công không, rồi trả lời phủ định và bàn về lòng thương xót, sự cứng lòng và quyền tể trị của Đức Chúa Trời. Cách hiểu quan hệ giữa sự lựa chọn của Đức Chúa Trời và trách nhiệm con người khác nhau giữa các truyền thống."
+    },
+    {
+      "question": "Theo phần kết Rô-ma 9, vì sao nhiều người trong dân Y-sơ-ra-ên vấp phạm trong khi dân ngoại đạt đến sự công bình?",
+      "options": [
+        "Vì dân ngoại có tổ tiên tốt hơn",
+        "Vì dân ngoại đạt được bởi đức tin, còn Y-sơ-ra-ên tìm cách như bởi việc làm và vấp phạm nơi đá vấp chân",
+        "Vì Đức Chúa Trời không quan tâm đến Y-sơ-ra-ên",
+        "Vì luật pháp không được ban cho Y-sơ-ra-ên"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô đối chiếu việc tìm kiếm công bình bởi đức tin với việc theo đuổi như bởi việc làm. Đoạn này phải được đọc cùng Rô-ma 10–11, nơi Phao-lô tiếp tục bày tỏ nỗi đau và hy vọng về Y-sơ-ra-ên."
+    }
+  ],
+  "10": [
+    {
+      "question": "Rô-ma 10:9–10 nêu hai điều gắn với sự cứu rỗi là gì?",
+      "options": [
+        "Xưng Đức Chúa Jêsus là Chúa và tin trong lòng Đức Chúa Trời đã khiến Ngài từ kẻ chết sống lại",
+        "Sinh ra trong gia đình Cơ Đốc và thuộc lòng toàn bộ luật pháp",
+        "Làm phép lạ và được nhiều người biết đến",
+        "Giữ một ngày lễ và ăn một loại thức ăn nhất định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô liên kết sự xưng nhận Đức Chúa Jêsus là Chúa với đức tin trong lòng rằng Đức Chúa Trời đã khiến Ngài sống lại từ kẻ chết."
+    },
+    {
+      "question": "Theo chuỗi lập luận trong Rô-ma 10:14–17, đức tin đến bởi điều gì?",
+      "options": [
+        "Bởi nghe lời của Đấng Christ được rao giảng",
+        "Bởi di truyền sinh học",
+        "Bởi tự suy nghĩ tích cực",
+        "Bởi địa vị xã hội"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô trình bày chuỗi nghe, tin, kêu cầu và việc người rao giảng được sai đi; đức tin đến bởi sự nghe lời Đấng Christ."
+    }
+  ],
+  "11": [
+    {
+      "question": "Hình ảnh cây ô-li-ve trong Rô-ma 11 cảnh báo tín hữu dân ngoại điều gì?",
+      "options": [
+        "Họ nên khoe mình hơn các nhánh khác",
+        "Họ được ghép vào nên không được kiêu ngạo, nhưng phải nhận biết mình đứng vững nhờ đức tin",
+        "Họ không liên hệ gì với lịch sử dân Y-sơ-ra-ên",
+        "Mọi nhánh tự nhiên chắc chắn không bao giờ có thể được ghép lại"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô cảnh báo các tín hữu dân ngoại không được kiêu ngạo đối với các nhánh tự nhiên. Hình ảnh nhấn mạnh sự phụ thuộc vào lòng nhân từ Đức Chúa Trời, không phải ưu thế dân tộc."
+    },
+    {
+      "question": "Một điểm quan trọng trong Rô-ma 11 về Y-sơ-ra-ên và dân ngoại là gì?",
+      "options": [
+        "Phao-lô bảo dân ngoại khinh thường Y-sơ-ra-ên",
+        "Phao-lô nói về sự mầu nhiệm, cảnh báo kiêu ngạo và nhấn mạnh lòng thương xót của Đức Chúa Trời",
+        "Phao-lô nói lời hứa của Đức Chúa Trời đã hoàn toàn vô nghĩa",
+        "Phao-lô dạy rằng không cần đức tin hay sự đáp ứng nào"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 11 trình bày một lập luận phức tạp về sự cứng lòng một phần, dân ngoại, Y-sơ-ra-ên và lòng thương xót. Các truyền thống giải kinh khác nhau về ý nghĩa chính xác của “cả Y-sơ-ra-ên sẽ được cứu”."
+    }
+  ],
+  "12": [
+    {
+      "question": "Phao-lô kêu gọi tín hữu dâng thân thể mình làm gì?",
+      "options": [
+        "Của lễ sống và thánh, đẹp lòng Đức Chúa Trời",
+        "Một vật sở hữu để khoe khoang",
+        "Một phương tiện để tránh mọi trách nhiệm",
+        "Một nghi thức chỉ diễn ra trong đền thờ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rô-ma 12 mở đầu phần khuyên dạy thực hành bằng lời kêu gọi dâng thân thể làm của lễ sống, thánh và đẹp lòng Đức Chúa Trời."
+    },
+    {
+      "question": "Phao-lô dùng hình ảnh thân thể có nhiều chi thể để dạy điều gì về Hội Thánh?",
+      "options": [
+        "Mọi tín hữu phải có cùng một chức vụ",
+        "Mỗi người có ân tứ khác nhau và cần phục vụ nhau như các chi thể của một thân",
+        "Chỉ người lãnh đạo mới có giá trị",
+        "Các ân tứ dùng để tạo địa vị cao hơn người khác"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hình ảnh thân thể nhấn mạnh sự hiệp một trong Đấng Christ, sự đa dạng của ân tứ và việc dùng ân tứ để phục vụ."
+    },
+    {
+      "question": "Theo Rô-ma 12:17–21, phản ứng nào phù hợp khi bị người khác làm điều ác?",
+      "options": [
+        "Trả thù để giữ danh dự",
+        "Lấy ác trả ác nhưng kín đáo",
+        "Không lấy ác trả ác; nếu có thể, sống hòa thuận và thắng điều ác bằng điều thiện",
+        "Luôn giả vờ rằng bất công không xảy ra"
+      ],
+      "correctIndex": 2,
+      "explanation": "Phao-lô cấm trả thù và kêu gọi thắng điều ác bằng điều thiện. Điều này không đòi hỏi gọi điều sai là đúng hay ngăn cản mọi hình thức bảo vệ người bị hại bằng phương tiện chính đáng."
+    }
+  ],
+  "13": [
+    {
+      "question": "Cách đọc có trách nhiệm Rô-ma 13:1–7 về chính quyền là gì?",
+      "options": [
+        "Mọi hành động của mọi chính quyền đều đúng về đạo đức",
+        "Đoạn này nói về vai trò của chính quyền trong trật tự xã hội, nhưng không nên tự động biến nó thành sự chấp thuận mọi hành vi bất công của nhà cầm quyền",
+        "Cơ Đốc nhân không bao giờ cần tuân theo bất kỳ luật nào",
+        "Đoạn này dạy rằng chính quyền có thể yêu cầu thờ lạy mình"
+      ],
+      "correctIndex": 1,
+      "explanation": "Rô-ma 13 trình bày chính quyền như một thiết chế có vai trò duy trì trật tự và công lý. Việc áp dụng khi chính quyền hành động bất công cần được xem cùng các đoạn khác trong Kinh Thánh về vâng lời Đức Chúa Trời, lương tâm và việc chống lại điều ác."
+    },
+    {
+      "question": "Phao-lô nói điều răn nào tóm tắt các điều răn liên quan đến người lân cận?",
+      "options": [
+        "Hãy yêu người lân cận như mình",
+        "Hãy tìm lợi ích riêng trước tiên",
+        "Hãy tránh tiếp xúc với mọi người khác",
+        "Hãy chỉ yêu người cùng nhóm với mình"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tình yêu không làm hại người lân cận, nên Phao-lô nói tình yêu làm trọn luật pháp trong mối quan hệ với người khác."
+    }
+  ],
+  "14": [
+    {
+      "question": "Trong các bất đồng về thức ăn và ngày đặc biệt, Phao-lô khuyên tín hữu điều gì?",
+      "options": [
+        "Khinh thường hoặc xét đoán nhau",
+        "Mỗi người phải ép người khác theo lương tâm của mình",
+        "Tiếp nhận nhau, không khinh thường hay xét đoán nhau trong những vấn đề được bàn đến",
+        "Rời bỏ Hội Thánh ngay khi có bất đồng"
+      ],
+      "correctIndex": 2,
+      "explanation": "Rô-ma 14 kêu gọi tiếp nhận người yếu đức tin và không khinh thường hay xét đoán nhau trong các vấn đề như thức ăn và ngày đặc biệt."
+    },
+    {
+      "question": "Vì sao một tín hữu có thể tự nguyện hạn chế quyền tự do của mình trong một số hoàn cảnh?",
+      "options": [
+        "Vì mọi thức ăn đều tự thân là tội lỗi",
+        "Để không trở thành cớ vấp phạm cho anh chị em và theo đuổi điều gây dựng sự hòa thuận",
+        "Để chứng minh mình công bình hơn người khác",
+        "Vì lương tâm của người khác luôn đúng trong mọi vấn đề"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô khuyến khích tránh dùng quyền tự do theo cách khiến anh chị em vấp phạm; điều quan trọng là sự công bình, bình an và vui vẻ trong Đức Thánh Linh."
+    }
+  ],
+  "15": [
+    {
+      "question": "Người mạnh mẽ nên làm gì theo Rô-ma 15:1–3?",
+      "options": [
+        "Chỉ làm điều vừa lòng mình",
+        "Mang lấy sự yếu đuối của người yếu và tìm điều ích cho người lân cận để gây dựng họ",
+        "Tránh giúp đỡ người khác",
+        "Dùng sự hiểu biết để làm người khác xấu hổ"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô kêu gọi người mạnh mang lấy sự yếu đuối của người yếu, không chỉ làm vừa lòng mình, theo gương Đấng Christ."
+    },
+    {
+      "question": "Trong Rô-ma 15:7–13, việc Đấng Christ tiếp nhận cả người Do Thái và dân ngoại nhấn mạnh điều gì?",
+      "options": [
+        "Sự tiếp nhận của Đức Chúa Trời dẫn đến sự hiệp một và ngợi khen Ngài giữa các dân",
+        "Các dân phải xóa bỏ mọi khác biệt văn hóa trước khi đến với Đức Chúa Trời",
+        "Lời hứa dành cho tổ phụ không còn ý nghĩa",
+        "Chỉ một dân tộc được phép ngợi khen Đức Chúa Trời"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô nối sự thành tín của Đức Chúa Trời với lời hứa dành cho tổ phụ và hy vọng các dân ngoại cùng ngợi khen Ngài."
+    },
+    {
+      "question": "Phao-lô mô tả ưu tiên truyền giáo của mình như thế nào?",
+      "options": [
+        "Chỉ phục vụ những nơi đã có Hội Thánh vững mạnh",
+        "Mong rao giảng ở nơi danh Đấng Christ chưa được biết đến, thay vì xây trên nền người khác đã đặt",
+        "Không muốn đi ra khỏi thành Rô-ma",
+        "Chỉ giảng cho những người có học thức"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô nói về khát vọng rao giảng Tin Lành tại những nơi chưa nghe danh Đấng Christ và kế hoạch đi Tây Ban Nha, ghé thăm Rô-ma."
+    },
+    {
+      "question": "Phao-lô đang đi đến Giê-ru-sa-lem để làm gì trong phần này?",
+      "options": [
+        "Để đem sự trợ giúp của các Hội Thánh ở Ma-xê-đoan và A-chai cho các thánh đồ nghèo tại Giê-ru-sa-lem",
+        "Để được phong làm vua",
+        "Để thu thuế cho đế quốc",
+        "Để tranh luận về việc xây một thành mới"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô nói ông đang đi Giê-ru-sa-lem để phục vụ các thánh đồ bằng khoản đóng góp từ Ma-xê-đoan và A-chai."
+    }
+  ],
+  "16": [
+    {
+      "question": "Phao-lô giới thiệu Phê-bê với Hội Thánh tại Rô-ma là ai?",
+      "options": [
+        "Một người phục vụ Hội Thánh tại Xen-cơ-rê và là người giúp đỡ nhiều người",
+        "Một quan tổng đốc La Mã",
+        "Một trong các con trai của Phao-lô",
+        "Người cai quản đền thờ Giê-ru-sa-lem"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phao-lô giới thiệu Phê-bê, người phục vụ Hội Thánh tại Xen-cơ-rê, và xin Hội Thánh tiếp nhận, giúp đỡ bà."
+    },
+    {
+      "question": "Bơ-rít-sin và A-qui-la được Phao-lô nhắc đến với thái độ nào?",
+      "options": [
+        "Ông gọi họ là những người cùng làm việc trong Đức Chúa Jêsus Christ và nhắc đến Hội Thánh nhóm tại nhà họ",
+        "Ông cảnh báo Hội Thánh phải tránh họ",
+        "Ông nói họ chưa từng giúp đỡ ai",
+        "Ông chỉ nhắc đến họ vì họ là quan chức chính trị"
+      ],
+      "correctIndex": 0,
+      "explanation": "Rô-ma 16 ghi nhận sự cộng tác của Bơ-rít-sin và A-qui-la trong Đấng Christ, cũng như Hội Thánh nhóm tại nhà họ."
+    },
+    {
+      "question": "Phao-lô khuyên Hội Thánh làm gì đối với những người gây chia rẽ và đặt chướng ngại nghịch với giáo lý đã học?",
+      "options": [
+        "Bỏ qua mọi giáo lý để giữ hòa khí",
+        "Cảnh giác và tránh xa họ; Phao-lô cảnh báo họ dùng lời ngọt ngào để lừa dối",
+        "Tin mọi người tự nhận là giáo sư",
+        "Trả thù họ bằng bạo lực"
+      ],
+      "correctIndex": 1,
+      "explanation": "Phao-lô khuyên cảnh giác với những người gây chia rẽ và làm vấp phạm, đối chiếu hành động của họ với sự phục vụ Đấng Christ."
+    },
+    {
+      "question": "Phần kết thư Rô-ma nhấn mạnh mục đích của sự bày tỏ lẽ mầu nhiệm đã được giữ kín từ lâu là gì?",
+      "options": [
+        "Để các dân vâng phục bởi đức tin, theo mạng lệnh Đức Chúa Trời đời đời",
+        "Để chỉ một nhóm người giữ riêng sự hiểu biết ấy",
+        "Để thay thế việc rao giảng Tin Lành bằng triết học",
+        "Để chứng minh Phao-lô nổi tiếng hơn các sứ đồ khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "Lời kết hướng đến Đức Chúa Trời khôn ngoan, Đấng bày tỏ lẽ mầu nhiệm và khiến lẽ ấy được biết đến giữa các dân để họ vâng phục bởi đức tin."
+    }
+  ]
+}
