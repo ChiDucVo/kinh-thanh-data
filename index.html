@@ -1,3 +1,8 @@
+Dưới đây là toàn bộ mã nguồn **`index.html`** hoàn chỉnh đã được tổng hợp tất cả các tính năng từ trước đến nay (bao gồm chức năng chọn chế độ chấm điểm Học thuộc, và giao diện Trắc nghiệm mới không bị lỗi nếu người dùng chưa chọn phân đoạn Kinh Thánh).
+
+Bạn hãy copy toàn bộ nội dung dưới đây, dán đè vào file `index.html` của bạn, lưu lại và dùng lệnh `git push` để đẩy lên nhé:
+
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -98,7 +103,8 @@
             <!-- TAB 2: HỌC THUỘC -->
             <div v-if="currentTab === 'memorize'">
                 <div v-if="!passageLoaded" class="card" style="text-align: center; padding: 32px 16px;">
-                    <p style="font-weight: 600; color: #64748b;">Vui lòng chọn và tải phân đoạn ở mục "Nghiên cứu" trước.</p>
+                    <i class="fa-solid fa-arrow-pointer text-4xl text-gray-300 mb-3 block" style="font-size: 32px;"></i>
+                    <p style="font-weight: 600; color: #64748b;">Vui lòng tải một phân đoạn Kinh Thánh bên tab Nghiên cứu trước.</p>
                 </div>
                 <div v-else>
                     <div class="card" style="text-align: center;">
@@ -206,8 +212,9 @@
                     </div>
                 </div>
             </div>
+        </main>
 
-        <!-- THANH CÔNG CỤ HIGHLIGHT (giữ nguyên) -->
+        <!-- THANH CÔNG CỤ HIGHLIGHT -->
         <div v-if="activeVerseKey && currentTab === 'read'" class="toolbar" @click.stop>
             <div style="display: flex; gap: 12px;">
                 <button @click="applyColor('hl-yellow')" class="color-btn hl-yellow" :class="{'active': hasColor('hl-yellow')}"></button>
@@ -235,38 +242,11 @@
                 <span style="font-size: 18px;">✍️</span><span>Trắc nghiệm</span>
             </button>
         </nav>
-
-        <!-- THANH CÔNG CỤ HIGHLIGHT -->
-        <div v-if="activeVerseKey && currentTab === 'read'" class="toolbar" @click.stop>
-            <div style="display: flex; gap: 12px;">
-                <button @click="applyColor('hl-yellow')" class="color-btn hl-yellow" :class="{'active': hasColor('hl-yellow')}"></button>
-                <button @click="applyColor('hl-green')" class="color-btn hl-green" :class="{'active': hasColor('hl-green')}"></button>
-                <button @click="applyColor('hl-pink')" class="color-btn hl-pink" :class="{'active': hasColor('hl-pink')}"></button>
-                <button @click="applyColor('hl-blue')" class="color-btn hl-blue" :class="{'active': hasColor('hl-blue')}"></button>
-            </div>
-            <div class="toolbar-divider"></div>
-            <div style="display: flex; gap: 8px;">
-                <button @click="toggleStyle('bold')" class="style-btn" :class="{'active': hasStyle('bold')}"><i class="fa-solid fa-bold"></i></button>
-                <button @click="toggleStyle('italic')" class="style-btn" :class="{'active': hasStyle('italic')}"><i class="fa-solid fa-italic"></i></button>
-            </div>
-            <div class="toolbar-divider"></div>
-            <button @click="clearHighlight" class="style-btn" style="color: #ef4444;"><i class="fa-solid fa-eraser"></i></button>
-        </div>
-
-        <nav>
-            <button @click="currentTab = 'read'" class="nav-item" :class="{ active: currentTab === 'read' }">
-                <span style="font-size: 18px;">📖</span><span>Nghiên cứu</span>
-            </button>
-            <button @click="currentTab = 'memorize'" class="nav-item" :class="{ active: currentTab === 'memorize' }">
-                <span style="font-size: 18px;">🧠</span><span>Học thuộc</span>
-            </button>
-            <button @click="currentTab = 'quiz'" class="nav-item" :class="{ active: currentTab === 'quiz' }">
-                <span style="font-size: 18px;">✍️</span><span>Trắc nghiệm</span>
-            </button>
-        </nav>
     </div>
 
     <!-- Liên kết tới file JS -->
     <script src="app.js"></script>
 </body>
 </html>
+
+```
